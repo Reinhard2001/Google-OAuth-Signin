@@ -21,7 +21,7 @@ app.use(express.urlencoded({
 app.use(express.static("public"));
 
 app.use(session({
-    secret: 'This Is A Secret Ya Numty',
+    secret: process.env.SECRET,
     resave: false,
     saveUninitialized: false
 }));
