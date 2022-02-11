@@ -9,15 +9,14 @@ const session = require("express-session")
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const findOrCreate = require("mongoose-findorcreate");
 
-
 const app = express();
 
-app.set("view engine", "ejs")
+app.set("view engine", "ejs");
+
 app.use(express.urlencoded({
     extended: true
 }));
 app.use(express.static("public"));
-
 app.use(session({
     secret: process.env.SECRET,
     resave: false,
