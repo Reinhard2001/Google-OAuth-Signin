@@ -8,9 +8,7 @@ const passportLocalMongoose = require("passport-local-mongoose");
 const session = require("express-session")
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const findOrCreate = require("mongoose-findorcreate");
-const bcrypt = require("bcrypt");
-const res = require("express/lib/response");
-const saltRounds = 10;
+
 
 const app = express();
 
@@ -77,11 +75,15 @@ passport.use(new GoogleStrategy({
 ));
 
 app.get("/", (req, res) => {
+    
     res.render("register")
+    
 });
 
 app.get("/login", (req, res) => {
+    
     res.render("login")
+    
 });
 
 app.get('/auth/google',
@@ -99,20 +101,21 @@ app.get('/auth/google/products',
     });
 
 app.get("/products", (req, res) => {
+    
     if (req.isAuthenticated()) {
         res.render("products");
     } else {
         res.redirect("/login")
     }
-
-   
-
+    
 });
 
 app.get("/logout", (req, res) => {
+    
     req.logOut();
     res.redirect('/')
-})
+    
+});
 
 
 app.post("/", (req, res) => {
@@ -133,15 +136,15 @@ app.post("/", (req, res) => {
         }
     });
 
-
 });
 
 app.post("/login", (req, res) => {
+    
     const user = new User({
         username: req.body.username,
         email: req.body.email,
         password: req.body.password
-    })
+    });
 
     req.login(user, (err) => {
         if (err) {
@@ -152,10 +155,11 @@ app.post("/login", (req, res) => {
                 res.redirect('/products')
             });
         }
-    })
+    });
+    
 });
 
 
 app.listen(3000, () => {
     console.log("Server running on port 3000...");
-})
+});
