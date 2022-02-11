@@ -1,0 +1,96 @@
+.register-login {
+    background-color: #423F3E;
+    text-align: center;
+}
+
+.signinbox {
+    width: 400px;
+    margin: 50px auto 100px auto;
+    padding: auto;
+}
+
+.loginbox {
+    width: 400px;
+    margin: 100px auto 100px auto;
+}
+
+.form-control {
+    border-top: #ccc;
+    border-left: #ccc;
+    border-right: #ccc;
+}
+
+.inputs {
+    margin-bottom: 1.25rem;
+}
+
+.or-container {
+    align-items: center;
+    color: #ccc;
+    display: flex;
+    margin: 26px 0
+}
+
+.line-separator {
+    background-color: #ccc;
+    flex-grow: 5;
+    height: 1px
+}
+
+.or-label {
+    flex-grow: 1;
+    margin: 0 15px;
+    text-align: center
+}
+
+p {
+    margin-top: 1.25rem;
+}
+
+.social-block {
+    background-color: #dc3545;
+    color: white;
+    transition: 0.3s;
+    border-radius: 7px 7px 7px 7px;
+    height: 60px;
+}
+
+.social-block:hover {
+    background-color: rgb(255, 255, 255);
+    border-color: #dc3545;
+    transition: 0.3s;
+}
+
+.google-btn {
+    font-weight: 700;
+    color: white;
+    position: relative;
+    top: -20px;
+    padding: 15px;
+}
+
+.google-btn:hover {
+    color: #dc3545;
+}
+
+.products {
+    background-color: #423F3E;
+}
+
+.product-box {
+    width: 80%;
+    margin: 100px auto 100px auto;
+    padding: 0;
+}
+
+img{
+    width: 70px;
+}
+.navbar-brand{
+    font-size: x-large;
+    font-weight: 600;
+}
+.dropdown-menu{
+position: relative;
+left: -120px;
+}

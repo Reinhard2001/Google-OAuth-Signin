@@ -1,0 +1,70 @@
+<%- include("partials/head") %>
+
+<body class="register-login">
+
+    <section class="project">
+
+        
+    </section>
+
+    <div class="container-fluid loginbox">
+
+        <div class="card">
+            <div class="card-body">
+                <form action="/login" method="post" class="form-signin">
+                    <h1 class="h3 mb-3 font-weight-lg">Welcome back!</h1>
+
+
+                    <div class="inputs">
+                        <input name="username" type="username" class="form-control username" placeholder="Username">
+                        <input name="email" type="email" class="form-control email" placeholder="Email address"
+                            autofocus>
+
+                        <input name="password" type="password" class="form-control password" placeholder="Password"
+                            required>
+                    </div>
+                    <button class="btn btn-lg btn-dark btn-block font-weight-lg" type="submit">Login</button>
+
+                </form>
+
+                <div class="or-container">
+                    <div class="line-separator"></div>
+                    <div class="or-label">or</div>
+                    <div class="line-separator"></div>
+                </div>
+
+                <div class="col-sm-13">
+                    <div class="card social-block border-danger">
+                        <div class="card-body social-block border-danger">
+                            <a class="btn btn-block google-btn" href="/auth/google" role="button">
+                                <i class="fab fa-google"></i>
+                                Login with Google
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <p><a href="/">Create Account</a></p>
+
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+    <div>
+
+    </div>
+
+    <p class="mt-5 mb-3 text-muted">&copy; 2001-2022</p>
+
+
+
+</body>
+
+
+
+<%- include("partials/foot") %>
